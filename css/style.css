@@ -1,0 +1,380 @@
+/* ---------------------------------------------- 
+  [ALL CONTENTS]
+
+1. Base Contents
+2. Navigation 
+3. Text-Animation
+
+---------------------------------------------- */
+
+.test {
+  height:100vh;
+  width:70vw;
+  margin:0 auto;
+  //background:pink;
+}
+
+
+/* ---------------------------------------------- /*
+* 1. Base Contents
+/* ---------------------------------------------- */
+
+:root{
+  --offset: 6px;
+}
+
+.a{
+  //background-color: blue;
+}
+
+.b{
+  //background-color: green;
+}
+
+.c{
+  background-color: pink;
+  display: none;
+  border:10px solid red;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+.container-box{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+
+/* ---------------------------------------------- /*
+* 2. Navigation
+/* ---------------------------------------------- */
+
+.navigation {
+  display:flex;
+  font-weight:900;
+  min-width:800px
+}
+
+.nav-mid {
+  font-size:16px;
+  color:black;
+  width:76vw;
+  height:10vh;
+  display:flex;
+  //background-color:red;
+}
+
+.nav-left,.nav-right {
+  width: 12vw;
+  height:10vh;
+  //background-color:yellow;
+}
+
+.text-mid {
+  cursor: Default;
+  width:4vw;
+  font-size:1.2em;
+  margin:auto 0;
+  //padding-top:1vh;
+  text-align:center;
+  //background-color:pink;
+}
+
+.text-left {
+  width:43vw;
+  margin:auto 0;
+  text-align:left;
+  //margin-left:3vw;
+  //margin-right:3vw;
+  //background-color:blue;
+}
+
+.text-left a {
+  color: black;
+  margin:0 2vw;
+  font-family:Helvetica;
+}
+
+.text-left a:hover {
+  cursor: Pointer;
+  background-color: transparent;
+  color: inherit;
+  background-image: linear-gradient(#73FFA0, #73FFA0);
+  background-repeat: no-repeat;
+  background-size: 0% 38%;
+  background-position: 0 130%;
+  animation: .5s nevigationtexthighlight  forwards;
+}
+
+@keyframes nevigationtexthighlight {
+  to {
+    background-size: 100% 38%;
+  }
+}
+
+.text-left span {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  bottom: 3rem;
+  animation: .5s swift-down ease-in-out forwards;
+}
+
+.text-right {
+  width:43vw;
+  margin:auto 0;
+  font-size:1.1rem;
+  text-align:right;
+  //background-color:blue;
+}
+
+.text-right a {
+  color: black;
+  margin-bottom:3px;
+  //margin-right:13vw;
+}
+
+.text-right a:hover {
+  cursor: Pointer;
+  background-color: transparent;
+  color: inherit;
+  background-image: linear-gradient(#73FFA0, #73FFA0);
+  background-repeat: no-repeat;
+  background-size: 0% 38%;
+  background-position: 0 142%;
+  animation: .5s nevigationtexthighlight  forwards;
+}
+
+.text-right span {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  bottom: 3rem;
+  animation: .5s swift-down ease-in-out forwards;
+}
+
+@keyframes swift-down {
+  to {
+    bottom: 0rem;
+  }
+}
+
+.text-left span:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.text-left span:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.text-left span:nth-of-type(3) {
+  animation-delay: .2s;
+}
+
+.text-right span:nth-of-type(1) {
+  animation-delay: .3s;
+}
+
+
+/* ---------------------------------------------- /*
+* 3. Text-Animation
+
+/* ---------------------------------------------- */
+
+.text-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+  font-size: 25px;
+  font-family: Helvetica;
+}
+
+.text-animation h1 {
+  font-size:2.5em;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.text-animation span {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  top: .8rem;
+  animation: .3s swift-up ease-in-out forwards;
+}
+
+.text-animation i {
+  font-style: normal;
+  position: relative;
+  top: 2.5rem;
+  animation: .5s swift-up ease-in-out forwards;
+}
+
+@keyframes swift-up {
+  to {
+    top: -0.3rem;
+  }
+}
+
+#text-animation_p {
+  letter-spacing:1px;
+}
+
+.text-animation p {
+  font-size: 1.5rem;
+  color: #454545;
+  line-height: 1.3rem;
+  position: relative;
+  font-weight:900;
+  top: .8rem;
+  opacity: 0;
+  animation: .5s swift-up ease-out forwards, .5s fade-in ease-out forwards;
+  animation-delay: .8s;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.text-animation span:nth-of-type(1) i {
+  animation-delay: 0s;
+}
+
+.text-animation span:nth-of-type(2) i {
+  animation-delay: .15s;
+}
+
+.text-animation span:nth-of-type(3) i {
+  animation-delay: .3s;
+}
+
+.text-animation span:nth-of-type(4) i {
+  animation-delay: .45s;
+}
+
+.text-animation span:nth-of-type(5) i {
+  animation-delay: .6s;
+}
+
+.text-animation span:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.text-animation span:nth-of-type(2) {
+  animation-delay: .15s;
+}
+
+.text-animation span:nth-of-type(3) {
+  animation-delay: .3s;
+}
+
+.text-animation span:nth-of-type(4) {
+  animation-delay: .45s;
+}
+
+.text-animation span:nth-of-type(5) {
+  animation-delay: .6s;
+}
+
+
+
+
+
+
+
+.text-carousel h2 {
+  margin-top:0;
+  width: 70vw;
+  font-size: 80px;
+  font-family: Helvetica;
+  line-hight: 1.06;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
+.text-carousel_mask {
+  height: 116px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.text-carousel_mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 110px;
+  padding-bottom: 0px;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+}
+.text-carousel_mask span[data-show] {
+  transform: translateY(-100%);
+  transition: .5s transform ease-in-out;
+}
+
+.text-carousel_mask span[data-up] {
+  transform: translateY(-200%);
+  transition: .5s transform ease-in-out;
+}
+
+.text-carousel_mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #0ecffe 50% , #07a6f1)
+}
+
+.text-carousel_mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198 50% , #0ec15d)
+}
+
+.text-carousel_mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb 50% , #633e9c)
+}
+
+.text-carousel_mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671 50% , #f45f7f)
+}
+
+
+.text-carousel .text-carousel_image {
+  position: inline-block;
+  height:79vh;
+  width:69vw;
+  right: 15vw;
+  margin-top: -13vh;
+  z-index:2;
+  display:none;
+}
+
+.text-carousel .image-show {
+  z-index:1;
+  display:inline-block;
+  object-fit: cover;
+  border-radius: .5rem;
+  margin-left:15vw;
+  box-shadow: .4rem .4rem .3rem rgba(0, 0, 0, .2);
+  //transform: translateX(50%);
+  //transition: .5s transform ease-in-out;
+}
+
+
+
+
+
